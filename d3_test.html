@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body { margin: 0; background: #1a1a1a; color: white; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden; }
+        .bar { fill: #00ffcc; transition: fill 0.3s; }
+        .bar:hover { fill: #ff00ff; }
+        .axis-label { fill: #888; font-size: 12px; }
+        h1 { position: absolute; top: 20px; font-weight: 200; letter-spacing: 2px; }
+    </style>
+</head>
+<body>
+    <h1>Müzikal Veri Görselleştirme Hazır 🌊</h1>
+    <div id="chart"></div>
+    <script>
+        const data = [
+            {note: "C", freq: 261.63},
+            {note: "D", freq: 293.66},
+            {note: "E", freq: 329.63},
+            {note: "F", freq: 349.23},
+            {note: "G", freq: 392.00},
+            {note: "A", freq: 440.00},
+            {note: "B", freq: 493.88}
+        ];
+
+        const width = 600;
+        const height = 400;
+        const margin = {top: 20, right: 20, bottom: 40, left: 60};
+
+        const svg = d3.select("#chart")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+        const x = d3.scaleBand()
+            .domain(data.map(d => d.note))
+            .range([margin.left, width - margin.right])
+            .padding(0.1);
+
+        const y = d3.scaleLinear()
+            .domain([0, d3.max(data, d => d.freq)])
+            .nice()
+            .range([height - margin.bottom, margin.top]);
+
+        svg.append("g")
+            .selectAll("rect")
+            .data(data)
+            .join("rect")
+            .attr("class", "bar")
+            .attr("x", d => x(d.note))
+            .attr("y", d => y(d.freq))
+            .attr("height", d => y(0) - y(d.freq))
+            .attr("width", x.bandwidth());
+
+        svg.append("g")
+            .attr("transform", `translate(0,${height - margin.bottom})`)
+            .call(d3.axisBottom(x))
+            .selectAll("text")
+            .attr("class", "axis-label");
+
+        svg.append("g")
+            .attr("transform", `translate(${margin.left},0)`)
+            .call(d3.axisLeft(y))
+            .selectAll("text")
+            .attr("class", "axis-label");
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+    "initial_balance": 10.0,
+    "current_balance": 10.003920041706495,
+    "trades": [
+        {
+            "timestamp": 1770934084,
+            "pair": "SOL/USDT",
+            "action": "SELL",
+            "price": 77.27,
+            "amount": 0.12941633234114147,
+            "pnl": 0.003920041706495115,
+            "pnl_pct": 0.03920041706495115
+        },
+        {
+            "timestamp": 1770934141,
+            "pair": "BTC/USDT",
+            "action": "SELL",
+            "price": 65809.99,
+            "amount": 0.00015195261388126633
+        }
+    ]
+}

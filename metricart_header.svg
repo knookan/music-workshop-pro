@@ -1,0 +1,17 @@
+<svg width="1500" height="500" viewBox="0 0 1500 500" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1500" height="500" fill="#050505"/>
+    <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#000000;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#00FFCC;stop-opacity:0.2" />
+        </linearGradient>
+    </defs>
+    <rect width="1500" height="500" fill="url(#grad1)"/>
+    <g opacity="0.3">
+        <path d="M0 400 Q 375 300 750 400 T 1500 400" stroke="#00FFCC" fill="none" stroke-width="2"/>
+        <path d="M0 350 Q 375 250 750 350 T 1500 350" stroke="#00FFCC" fill="none" stroke-width="1"/>
+        <path d="M0 450 Q 375 350 750 450 T 1500 450" stroke="#00FFCC" fill="none" stroke-width="1"/>
+    </g>
+    <text x="750" y="260" font-family="Outfit, sans-serif" font-size="60" fill="#FFFFFF" text-anchor="middle" font-weight="bold" letter-spacing="10">VERİNİN SANATLA BULUŞTUĞU NOKTA</text>
+    <text x="750" y="320" font-family="Outfit, sans-serif" font-size="20" fill="#00FFCC" text-anchor="middle" letter-spacing="5">MetricArt | Elite Data Visualization</text>
+</svg>

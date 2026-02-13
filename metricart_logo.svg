@@ -1,0 +1,8 @@
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+    <rect width="500" height="500" fill="#050505"/>
+    <path d="M150 350 L150 150 L250 250 L350 150 L350 350" stroke="#00FFCC" stroke-width="25" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cx="250" cy="300" r="15" fill="#FFFFFF">
+        <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="250" y="420" font-family="Outfit, sans-serif" font-size="40" fill="#FFFFFF" text-anchor="middle" font-weight="bold">MetricArt</text>
+</svg>

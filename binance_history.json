@@ -1,0 +1,54 @@
+[
+    {
+        "timestamp": 1770921431,
+        "total_usdt": 25.0,
+        "prices": {
+            "BTC/USDT": 65343.43,
+            "ETH/USDT": 1911.24,
+            "BNB/USDT": 603.67,
+            "SOL/USDT": 77.52
+        },
+        "assets": {
+            "USDT": 25.0
+        }
+    },
+    {
+        "timestamp": 1770934073,
+        "total_usdt": 25.0,
+        "prices": {
+            "BTC/USDT": 65765.35,
+            "ETH/USDT": 1922.84,
+            "BNB/USDT": 606.88,
+            "SOL/USDT": 77.29
+        },
+        "assets": {
+            "USDT": 25.0
+        }
+    },
+    {
+        "timestamp": 1770934131,
+        "total_usdt": 25.0,
+        "prices": {
+            "BTC/USDT": 65760.51,
+            "ETH/USDT": 1922.9,
+            "BNB/USDT": 606.7,
+            "SOL/USDT": 77.28
+        },
+        "assets": {
+            "USDT": 25.0
+        }
+    },
+    {
+        "timestamp": 1770962817,
+        "total_usdt": 25.0,
+        "prices": {
+            "BTC/USDT": 66246.21,
+            "ETH/USDT": 1936.67,
+            "BNB/USDT": 597.61,
+            "SOL/USDT": 78.42
+        },
+        "assets": {
+            "USDT": 25.0
+        }
+    }
+]
