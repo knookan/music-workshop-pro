@@ -1,71 +1,29 @@
-import ccxt
-import json
-import os
-import time
 import random
+import datetime
 
-def simulate_trading():
-    try:
-        with open('binance_keys.json', 'r') as f:
-            keys = json.load(f)
-        
-        exchange = ccxt.binance({
-            'apiKey': keys['api_key'],
-            'secret': keys['secret_key'],
-            'enableRateLimit': True,
-        })
-        
-        history_file = 'trading_simulation.json'
-        if not os.path.exists(history_file):
-            state = {
-                "initial_balance": 10.0,
-                "current_balance": 10.0,
-                "trades": []
-            }
-        else:
-            with open(history_file, 'r') as f:
-                state = json.load(f)
-
-        # Simulation logic: pick a volatile coin from top 5
-        pairs = ['BTC/USDT', 'ETH/USDT', 'SOL/USDT', 'BNB/USDT', 'AVAX/USDT']
-        pair = random.choice(pairs)
-        ticker = exchange.fetch_ticker(pair)
-        price = ticker['last']
-        
-        # Decide Buy or Sell (Random for simulation purposes, but could use EMA logic)
-        action = random.choice(['BUY', 'SELL'])
-        
-        # Calculate theoretical PnL (simulating a trade duration of 5 mins)
-        # We'll just record the entry and wait for the next cron cycle to "close" it or just log it
-        
-        trade = {
-            "timestamp": int(time.time()),
-            "pair": pair,
-            "action": action,
-            "price": price,
-            "amount": 10.0 / price # Using full simulated 10$
-        }
-        
-        state['trades'].append(trade)
-        
-        # Simple PnL logic for the LAST trade if it exists
-        if len(state['trades']) > 1:
-            prev_trade = state['trades'][-2]
-            # Mock profit/loss between -1% and +1.5%
-            pnl_pct = random.uniform(-0.01, 0.015)
-            profit = state['current_balance'] * pnl_pct
-            state['current_balance'] += profit
-            prev_trade['pnl'] = profit
-            prev_trade['pnl_pct'] = pnl_pct * 100
-
-        with open(history_file, 'w') as f:
-            json.dump(state, f, indent=4)
-            
-        print(f"Simülasyon işlemi kaydedildi: {action} {pair} @ {price}")
-        print(f"Güncel Simüle Bakiye: {state['current_balance']:.2f} USDT")
-
-    except Exception as e:
-        print(f"Simülasyon Hatası: {str(e)}")
+def simulate_trade(starting_balance):
+    # Mock data for demonstration
+    symbols = ["BTCUSDT", "ETHUSDT", "SOLUSDT", "BNBUSDT"]
+    symbol = random.choice(symbols)
+    
+    # Simulate a small overnight price movement (-2% to +3%)
+    change_pct = random.uniform(-0.02, 0.03)
+    ending_balance = starting_balance * (1 + change_pct)
+    profit = ending_balance - starting_balance
+    
+    timestamp = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
+    
+    log_entry = (
+        f"[{timestamp}] Trade Simulation: {symbol}\n"
+        f"Initial: {starting_balance:.2f} USDT | Final: {ending_balance:.2f} USDT | Profit: {profit:+.4f} USDT\n"
+        f"--------------------------------------------------\n"
+    )
+    
+    with open("trading_sim.log", "a") as f:
+        f.write(log_entry)
+    
+    return log_entry
 
 if __name__ == "__main__":
-    simulate_trading()
+    result = simulate_trade(10.0)
+    print(result)
