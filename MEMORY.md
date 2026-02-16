@@ -17,12 +17,12 @@
 ## 🎸 Ongoing Work
 - **Silicon Soul:** Fusion of Blues-Rock/Electronic. Hybrid spatial mixing.
 - **Deep-Sync:** Module 1 complete (Saturation). Method: Subtractive Lo-Fi.
-- **Trading Simulation:** Active overnight experiment. Current balance: 10.22 USDT (Updated 2026-02-16 12:45 UTC).
-- **Recent Update (2026-02-16 12:45 UTC):** 
+- **Trading Simulation:** Active overnight experiment. Current balance: 10.21 USDT (Updated 2026-02-16 13:15 UTC).
+- **Recent Update (2026-02-16 13:15 UTC):** 
     - Simulation Run: Executed `sim_trading.py`.
-    - Trade: BTCUSDT.
-    - Result: +0.2247 USDT PnL.
-    - Status: Balance at 10.2247 USDT. Logged in Decision_Trees.md.
+    - Trade: ETHUSDT.
+    - Result: +0.2061 USDT PnL.
+    - Status: Balance at 10.2061 USDT. Logged in Decision_Trees.md.
 
 ## 🛠 Rivr_Core V2
 - **Logic Engine:** Pure rationalism tempered by musical intuition.
