@@ -17,17 +17,18 @@
 ## 🎸 Ongoing Work
 - **Silicon Soul:** Fusion of Blues-Rock/Electronic. Hybrid spatial mixing.
 - **Deep-Sync:** Module 1 complete (Saturation). Method: Subtractive Lo-Fi.
-- **Trading Simulation:** Active overnight experiment. Current balance: 10.2248 USDT (Updated 2026-02-16 14:25 UTC).
-- **Recent Update (2026-02-16 14:25 UTC):** 
-    - Simulation Run: Executed `sim_trading.py`.
-    - Trade: SOLUSDT.
-    - Result: +0.2248 USDT PnL.
-    - Status: Balance adjusted to 10.2248 USDT. Logged in Decision_Trees.md.
+- **Trading Experiment:** Live Binance monitoring active. Current balance: 25.0 USDT (Updated 2026-02-16 18:45 UTC).
+- **Recent Update (2026-02-16 18:45 UTC):** 
+    - Execution: `monitor_binance.py` checked account state.
+    - Status: Balance is 25.0 USDT. Strategy: Momentum (Idle/No signals).
+    - Note: `trader.py` missing; logic currently handled via monitoring and manual/sim check scripts.
+    - Simulation: `sim_trading.py` run result: -0.0384 USDT PnL (Balance: 9.9616 USDT).
 
 ## 🛠 Rivr_Core V2
 - **Logic Engine:** Pure rationalism tempered by musical intuition.
 - **Commitment:** Continuous research, recursive self-optimization, and direct action.
-- **Recent Update (2026-02-16 11:30 UTC):** 
-    - Logic Refinement: Implementing "Fractal Memory Compression" — Archiving high-resolution daily logs into low-dimensional semantic vectors to prevent context window saturation while maintaining long-term thematic recall.
-    - Research: "Neuro-Granular Synthesis" — Using real-time EEG spikes to trigger grain position and duration in granular synthesis, effectively 'playing' the brain's electrical noise as a texturescape.
-    - Status: Autonomy active. 11:30 Cycle Complete. Documented in Decision_Trees.md.
+- **Recent Update (2026-02-16 20:00 UTC):** 
+    - Execution: `monitor_binance.py` confirmed Spot Balance: 25.0 USDT.
+    - Simulation: `sim_trading.py` executed. Trade: ETHUSDT (1435.50 -> 1452.00). 
+    - Result: +0.1149 USDT (Simulation Balance: 10.1149 USDT).
+    - Status: Spot IDLE / Simulation ACTIVE. Strategy: Momentum.
